@@ -1,5 +1,6 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Title, Meta } from '@angular/platform-browser';
 import { of } from 'rxjs';
 
 import { PetsComponent } from './pets.component';
@@ -18,7 +19,14 @@ describe('PetsComponent', () => {
         }
       ]);
     }
-  }
+  };
+
+  let titleServiceMock = {
+    setTitle: () => {},
+  };
+  let metaServiceMock = {
+    updateTag: ()=> {},
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -26,6 +34,8 @@ describe('PetsComponent', () => {
       declarations: [ PetsComponent ],
       providers: [
         {provide: PetsService, useValue: petServiceMock},
+        {provide: Title, useValue: titleServiceMock},
+        {provide: Meta, useValue: metaServiceMock},
       ]
     })
     .compileComponents();

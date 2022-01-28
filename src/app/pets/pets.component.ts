@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Animals, PetsService } from './pets.service';
@@ -13,9 +14,18 @@ export class PetsComponent implements OnInit {
   skeletonActivated = true;
   petSelected:  Animals | undefined;
 
-  constructor(private petsService: PetsService) { }
+  constructor(
+    private petsService: PetsService,
+    private titleService: Title,
+    private metaTagService: Meta,
+
+  ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Amazing Animals');
+    this.metaTagService.updateTag({
+      name: 'description', content: 'Show amazing animals'
+    })
     this.getAnimals();
   }
 
