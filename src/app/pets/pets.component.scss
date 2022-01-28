@@ -1,0 +1,102 @@
+
+.animals {
+  background-color: #E5E5E5;
+}
+
+.group-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 2%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding-left: 2rem;
+  padding:  2rem 0 0 2rem;
+  margin-bottom: 1%;
+}
+
+.container-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-item {
+  display: flex;
+  padding: 2%;
+  flex: 1 28%;
+  flex-direction: column;
+  background-color: #E5E5E5;
+  max-width: 509px;
+}
+
+.avatar {
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgb(204, 201, 201);
+  border-radius: 10px;
+  p {
+    padding: 0 0 2rem 1.3rem;
+  }
+}
+.avatar > img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+
+}
+
+figcaption {
+  font-family: 'DM Serif Display';
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 20px;
+}
+
+button {
+  background-color: #2ECC71;
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: 3px solid transparent;
+  color: white;
+  height: 40px;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+
+.scroll-main {
+  height: 625px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 75vH;
+}
+
+.modal-pet {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-color: #d3d3d3e3;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span.close-md {
+  position: absolute;
+  top: 4%;
+  left: 95%;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #080808;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

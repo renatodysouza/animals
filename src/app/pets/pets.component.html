@@ -1,0 +1,24 @@
+<section class="animals" *ngIf="allPets$ | async as allPets">
+  <div class="group-header">
+    <h1 class="title">Amazing Animals</h1>
+    <button (click)="updateAnimals()">UPDATE</button>
+  </div>
+
+  <div class="container-main">
+    <cdk-virtual-scroll-viewport itemSize="3" class="scroll-main">
+    <article class="container-item" *cdkVirtualFor="let pets of allPets">
+      <figure class="avatar" (click)="openModal(pets)">
+        <img [src]="pets?.avatar" [alt]="pets?.type">
+        <figcaption>{{pets?.name}}</figcaption>
+        <p>{{pets?.type | titlecase}}</p>
+      </figure>
+    </article>
+  </cdk-virtual-scroll-viewport>
+  </div>
+</section>
+<app-skeleton *ngIf="skeletonActivated" ></app-skeleton>
+
+<div class="modal-pet" *ngIf="petSelected">
+  <span class="close-md" (click)="closeModal()">X</span>
+  <img [src]="petSelected?.avatar" [alt]="petSelected?.type">
+</div>

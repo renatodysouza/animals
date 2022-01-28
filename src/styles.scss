@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/reset";
+@import "./assets/scss/variables";
+
+
+body {
+  overflow: hidden; 
+}
+
+h1 {
+  font-family: $fontFamily;
+}
+
+p {
+  font-family: 'open-sans';
+  font-size: 1rem;
+  color: #6E798C;
+  font-weight: 400;
+}
+
+.cdk-virtual-scroll-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  contain: content;
+  display: flex;
+  flex-wrap: wrap;
+}
+

@@ -1,0 +1,20 @@
+footer {
+  background-color: black;
+  width: 100%;
+  min-height: 66px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+span {
+  color: white;
+  margin: 2% 0 0 2%;
+  font-family: 'DM Serif Display';
+  font-size: 1.0rem;
+  font-weight: 900;
+}

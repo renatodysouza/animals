@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #00c99e;
+  --secondary-color: #164396;
+  --tertiary-color: #eb3c7d;
+  --bg__text: #164396;
+  --bg__table: #f3f2f2;
+  --bg__table__active: #164396;
+  --color-default: #212529;
+  --text__hover: #00d2a0;
+  --text__label: #00d2a0;
+  --font__headline: 'FS Joey Heavy Regular';
+  --font__normal: "MuseoSan300";
+  --font__bold: 'MuseoSan500',Arial,Helvetica,sans-serif;
+  --font__quicklink: 'MuseoSan700',Arial,Helvetica,sans-serif;
+  --text__black: #333338;
+  --danger: #dc3545;
+  --color-primary: #164396;
+}
+
+$fontFamily: 'DM Serif Display';
+
+font-face {
+  font-family: DM Serif Display;
+  src: url(../fonts/roboto/Roboto-Regular.ttf) format("opentype");
+}
